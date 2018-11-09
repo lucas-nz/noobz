@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>    
+    <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhousz.zerg.dao.mysql.TLogsDao">
+
+	<insert id="save" parameterType="com.zhousz.zerg.domain.TLogs" useGeneratedKeys="true"
+		keyProperty="id">
+		insert into t_logs(action, data, ip, author_id, created)
+		  values(#{action}, #{data}, #{ip}, #{authorId}, #{created})
+	</insert>
+</mapper>

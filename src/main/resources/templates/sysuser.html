@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>thymeleaf</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" type="text/css">
+</head>
+<body>
+    <table>
+        <tr>
+            <th>no</th>
+            <th>operId</th>
+            <th>empName</th>
+        </tr>
+        <tr th:each="list,stat : ${userList}">
+            <td th:text="${stat.count}"></td>
+            <td th:text="${list.operId}"></td>
+            <td th:text="${list.empName}"></td>
+        </tr>
+    </table>
+</body>
+</html>
