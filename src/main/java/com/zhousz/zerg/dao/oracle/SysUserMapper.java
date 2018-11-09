@@ -1,4 +1,4 @@
-package com.zhousz.zerg.dao;
+package com.zhousz.zerg.dao.oracle;
 
 import java.util.List;
 
@@ -6,11 +6,9 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Result;
 import org.apache.ibatis.annotations.Results;
 import org.apache.ibatis.annotations.Select;
-import org.springframework.stereotype.Component;
 
 import com.zhousz.zerg.domain.SysUser;
 
-@Component
 @Mapper
 public interface SysUserMapper {
 
