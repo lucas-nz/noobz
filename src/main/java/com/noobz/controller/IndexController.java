@@ -12,15 +12,18 @@ import com.noobz.domain.User;
 import com.noobz.service.UserService;
 
 @Controller
-public class IndexController {
+public class IndexController extends BaseController {
 
 	@Resource
 	private UserService userService;
 	
-	@ResponseBody
+	/**
+	 * @return: String      
+	 * @Comment: 首页 
+	 */
 	@GetMapping("/")
 	public String index(){
-		return "index";
+		return render("index");
 	}
 	
 	@ResponseBody
