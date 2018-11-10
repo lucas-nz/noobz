@@ -2,13 +2,9 @@ package com.noobz.dao;
 
 import com.noobz.domain.User;
 import com.noobz.domain.UserExample;
-
 import java.util.List;
-
-import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
-@Mapper
 public interface UserMapper {
     long countByExample(UserExample example);
 

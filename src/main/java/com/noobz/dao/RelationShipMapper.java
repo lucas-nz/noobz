@@ -1,7 +1,7 @@
 package com.noobz.dao;
 
 import com.noobz.domain.RelationShipExample;
-import com.noobz.domain.RelationShipKey;
+import com.noobz.domain.RelationShip;
 import java.util.List;
 import org.apache.ibatis.annotations.Param;
 
@@ -10,15 +10,15 @@ public interface RelationShipMapper {
 
     int deleteByExample(RelationShipExample example);
 
-    int deleteByPrimaryKey(RelationShipKey key);
+    int deleteByPrimaryKey(RelationShip key);
 
-    int insert(RelationShipKey record);
+    int insert(RelationShip record);
 
-    int insertSelective(RelationShipKey record);
+    int insertSelective(RelationShip record);
 
-    List<RelationShipKey> selectByExample(RelationShipExample example);
+    List<RelationShip> selectByExample(RelationShipExample example);
 
-    int updateByExampleSelective(@Param("record") RelationShipKey record, @Param("example") RelationShipExample example);
+    int updateByExampleSelective(@Param("record") RelationShip record, @Param("example") RelationShipExample example);
 
-    int updateByExample(@Param("record") RelationShipKey record, @Param("example") RelationShipExample example);
+    int updateByExample(@Param("record") RelationShip record, @Param("example") RelationShipExample example);
 }
