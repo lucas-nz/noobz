@@ -1,7 +1,11 @@
 package com.noobz.domain;
 
-public class Log {
-    private Integer id;
+import java.io.Serializable;
+
+public class Log implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+	private Integer id;
 
     private String action;
 

@@ -1,7 +1,11 @@
 package com.noobz.domain;
 
-public class RelationShipKey {
-    private Integer cid;
+import java.io.Serializable;
+
+public class RelationShipKey implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+	private Integer cid;
 
     private Integer mid;
 

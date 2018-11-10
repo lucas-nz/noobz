@@ -1,7 +1,11 @@
 package com.noobz.domain;
 
-public class Attach {
-    private Integer id;
+import java.io.Serializable;
+
+public class Attach implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+	private Integer id;
 
     private String fname;
 

@@ -1,7 +1,11 @@
 package com.noobz.domain;
 
-public class Comment {
-    private Integer coid;
+import java.io.Serializable;
+
+public class Comment implements Serializable{
+	private static final long serialVersionUID = 1L;
+
+	private Integer coid;
 
     private Integer cid;
 
