@@ -1,9 +1,11 @@
 package com.noobz.dao;
 
+import java.util.List;
+
+import org.apache.ibatis.annotations.Param;
+
 import com.noobz.domain.Content;
 import com.noobz.domain.ContentExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
 
 public interface ContentMapper {
     long countByExample(ContentExample example);
