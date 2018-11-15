@@ -23,9 +23,7 @@ $(function() {
 		}
 	});
 	document.addEventListener("click", function(a) {
-		/*
 		null == a.target.href && "footer" != a.target.className && "copyright" != a.target.className && "author__urls social-icons" != a.target.className && "author__avatar" != a.target.className && "sidebar sidebar-active" != a.target.className &&
-		*/
 		burst1.tune({
 			x: a.pageX,
 			y: a.pageY
@@ -46,8 +44,7 @@ $(function() {
 	});
 	header.init();
 //======================== headroom_header end ================	
-	
-	
+	$("#text_intro").animatext("Random");
 	
 });
 </script>

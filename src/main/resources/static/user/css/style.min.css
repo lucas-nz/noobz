@@ -41,7 +41,9 @@ body {
 	color: #313131;
 	text-rendering: geometricPrecision;
 	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale
+	-moz-osx-font-smoothing: grayscale;
+	background-color: azure;
+	
 }
 
 body>:first-child {
@@ -147,7 +149,7 @@ code {
 	margin: 0 3px;
 	padding: 2px 6px;
 	border-radius: 3px;
-	background-color: #f7f7f7
+	background-color: #e0e0e0;
 }
 
 pre code {
@@ -481,6 +483,30 @@ input:-ms-input-placeholder,textarea:-ms-input-placeholder {
 	height: 32px;
 	outline: 0
 }
+
+.navbar-container .div-logo {
+	display: inline-block;
+	width: 380px;
+	height: 80px;
+	position: absolute;
+	top: 0;
+	left: 0;	
+}
+
+
+
+.div-logo .div-intro {
+	width: 	300px;
+	height: 80px;
+	display: inline-block;
+	position: relative;
+}
+
+.div-logo .div-intro h3{
+	position: absolute;
+	font-size: 12px;
+}
+
 
 .navbar-menu {
 	z-index: 10;
@@ -863,7 +889,7 @@ input:-ms-input-placeholder,textarea:-ms-input-placeholder {
 	margin: 0;
 	padding: 1.3em;
 	color: #313131;
-	background-color: #f7f7f7
+	background-color: #e0e0e0;
 }
 
 .post-content p a {
@@ -993,10 +1019,10 @@ input:-ms-input-placeholder,textarea:-ms-input-placeholder {
 }
 
 .post-content .post-tags a:hover {
-	color: #5f5f5f;
+	color: #fff;
 	border: 1px solid #f7f7f7;
 	outline-style: none;
-	background: #f7f7f7
+	background: #90ec1f;
 }
 
 .post-info {

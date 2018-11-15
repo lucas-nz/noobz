@@ -6,6 +6,7 @@ import org.apache.ibatis.annotations.Param;
 
 import com.noobz.domain.Content;
 import com.noobz.domain.ContentExample;
+import com.noobz.model.Archive;
 
 public interface ContentMapper {
     long countByExample(ContentExample example);
@@ -35,4 +36,6 @@ public interface ContentMapper {
     int updateByPrimaryKeyWithBLOBs(Content record);
 
     int updateByPrimaryKey(Content record);
+    
+    List<Archive> selectArchives();
 }

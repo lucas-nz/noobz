@@ -20,4 +20,9 @@ public abstract class BaseController {
 		return this;
 	}
 	
+	public String render_404() {
+		return "comm/error_404";
+	}
+	
+	
 }

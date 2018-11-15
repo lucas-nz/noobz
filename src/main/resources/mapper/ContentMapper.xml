@@ -446,4 +446,15 @@
       allow_feed = #{allowFeed,jdbcType=BIT}
     where cid = #{cid,jdbcType=INTEGER}
   </update>
+  <resultMap id="archiveMap" type="com.noobz.model.Archive">
+  	<id column="date" property="date"></id>
+  	<result column="count" property="count"></result>
+  </resultMap>
+  
+  <select id="selectArchives" resultMap="archiveMap">
+  	select FROM_UNIXTIME(created, '%Y年%m月') as date, count(*) as count 
+  	  from t_contents where type = 'post' and status = 'publish' 
+  	group by date 
+  	order by date desc
+  </select>
 </mapper>

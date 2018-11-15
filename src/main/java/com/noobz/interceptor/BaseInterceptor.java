@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.noobz.util.Common;
+import com.noobz.util.Commons;
 import com.noobz.util.IPKit;
 
 @Component
@@ -20,7 +20,7 @@ public class BaseInterceptor implements HandlerInterceptor {
 			.getLogger(BaseInterceptor.class);
 	
 	@Resource
-	private Common common;
+	private Commons common;
 
 	
 	/**
@@ -57,7 +57,7 @@ public class BaseInterceptor implements HandlerInterceptor {
 			HttpServletResponse response, Object handler,
 			ModelAndView modelAndView) throws Exception {
 		// 将common工具类添加到request中. 供thymeleaf调用.
-		request.setAttribute("common", common);
+		request.setAttribute("commons", common);
 	}
 
 	@Override
