@@ -10,6 +10,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
+import com.noobz.util.AdminCommons;
 import com.noobz.util.Commons;
 import com.noobz.util.IPKit;
 
@@ -22,7 +23,8 @@ public class BaseInterceptor implements HandlerInterceptor {
 	@Resource
 	private Commons common;
 
-	
+	@Resource
+	private AdminCommons adminCommons;
 	/**
 	 * <p>Title: preHandle</p>   
 	 * <p>Description: </p>   在业务处理之前调用, 预处理, 可以进行编码\ 安全校验\ 权限校验
@@ -58,6 +60,7 @@ public class BaseInterceptor implements HandlerInterceptor {
 			ModelAndView modelAndView) throws Exception {
 		// 将common工具类添加到request中. 供thymeleaf调用.
 		request.setAttribute("commons", common);
+		request.setAttribute("adminCommons", adminCommons);
 	}
 
 	@Override
@@ -67,3 +70,4 @@ public class BaseInterceptor implements HandlerInterceptor {
 		
 	}
 }
+

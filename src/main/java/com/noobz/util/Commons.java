@@ -135,7 +135,17 @@ public class Commons {
             return text;
         }
     }
+    private static final String[] ICONS = {"bg-ico-book", "bg-ico-game", "bg-ico-note", "bg-ico-chat", "bg-ico-code", "bg-ico-image", "bg-ico-web", "bg-ico-link", "bg-ico-design", "bg-ico-lock"};
 
+    /**
+     * 显示文章图标
+     *
+     * @param cid
+     * @return
+     */
+    public static String show_icon(int cid) {
+        return ICONS[cid % ICONS.length];
+    }
     /**
      * 显示文章内容，转换markdown为html
      *
@@ -150,8 +160,31 @@ public class Commons {
         }
         return "";
     }
+    /**
+     * 获取随机数
+     *
+     * @param max
+     * @param str
+     * @return
+     */
+    public static String random(int max, String str) {
+        return UUID.random(1, max) + str;
+    }
 	
-	
+    /**
+     * 返回github 头像地址
+     * @param: @param email
+     * @param: @return      
+     * @return: String
+     */
+	public static String gravatar(String email) {
+		String avatarUrl = "http://github.com/identicons/";
+		if (StringUtils.isBlank(email)) {
+			email = "13687646803@163.com";
+		}
+		String hash = TaleUtils.MD5encode(email.trim().toLowerCase());
+		return avatarUrl + hash + ".png";
+	}
     /**
      * 格式化unix时间戳为日期
      *

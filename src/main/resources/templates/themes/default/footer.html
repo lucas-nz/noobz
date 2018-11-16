@@ -43,8 +43,24 @@ $(function() {
 		}
 	});
 	header.init();
-//======================== headroom_header end ================	
+//======================== headroom_header end ================
+// jquery animatext	
 	$("#text_intro").animatext("Random");
+// highlight code	
+	hljs.initHighlightingOnLoad();
+	
+	$("#search-inp").keypress(function(e){
+		var key = e.which;
+		if(key == 13){
+			var keyword = $(this).val();
+			if(keyword && keyword != ""){
+				window.location.href = "/search/" + keyword;
+			}
+		}
+	});
+	
+	
+	
 	
 });
 </script>

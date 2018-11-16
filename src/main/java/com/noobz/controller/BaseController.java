@@ -2,6 +2,9 @@ package com.noobz.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+import com.noobz.domain.User;
+import com.noobz.util.TaleUtils;
+
 public abstract class BaseController {
 	
 	public static String THEME = "themes/default";
@@ -24,5 +27,8 @@ public abstract class BaseController {
 		return "comm/error_404";
 	}
 	
+	public User user(HttpServletRequest request) {
+		return TaleUtils.getLoginUser(request);
+	}
 	
 }
