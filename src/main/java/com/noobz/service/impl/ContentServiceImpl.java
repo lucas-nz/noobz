@@ -98,7 +98,7 @@ public class ContentServiceImpl implements ContentService{
         }
         int time = DateKit.getCurrentUnixTime();
         content.setModified(time);
-        Integer cid = content.getCid();
+//        Integer cid = content.getCid();
         content.setContent(EmojiParser.parseToAliases(content.getContent()));
 
         contentMapper.updateByPrimaryKeySelective(content);

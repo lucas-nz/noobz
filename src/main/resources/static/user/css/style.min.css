@@ -454,6 +454,19 @@ input:-ms-input-placeholder,textarea:-ms-input-placeholder {
 	box-shadow: 0 1px 5px rgba(0,0,0,.1)
 }
 
+.header:hover>.navbar-list{
+	height: 200px;
+	transition-duration: .9s;
+	-webkit-transition-duration: .9s;
+	-moz-transition-duration: .9s;
+}
+
+.navbar-list {
+	height: 0px;
+	background-color: #2a232333;
+	display: block;
+
+}
 .navbar-container {
 	position: relative;
 	width: 1040px;

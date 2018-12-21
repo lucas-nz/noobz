@@ -40,8 +40,6 @@ public class NoobzApplication {
 		return new DataSourceTransactionManager(dataSource());
 	}
 	
-	
-	
 	public static void main(String[] args) {
 		SpringApplication.run(NoobzApplication.class, args);
 	}
